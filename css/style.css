@@ -1,0 +1,368 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #f2f5f9;
+font-family: 'Roboto', sans-serif;
+}
+/*div{
+	border: 1px solid black;
+}*/
+
+
+
+
+input[name=uppercase] {
+    text-transform: capitalize;
+}
+
+#cover-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+
+#title{
+	color: white;
+	margin-bottom: 8px;
+}
+
+#wrapper{
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+	
+}
+
+#canvasContainer{
+	margin: 5px;
+}
+#canvas {
+    background-color: #eee;
+   
+    text-align: center;
+    height: 300px;
+    width: 300px;
+}
+
+#formWrapper{
+
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	width: 50%;
+	align-items: center;
+}
+
+
+.progressStyle{
+	-webkit-appearance:none;
+	appearance:none;
+	width: 100%;
+}
+
+.progressContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+
+
+
+.custom-file-input{
+	cursor: pointer;
+    margin-top: 15px;
+
+}
+#btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+audio::-internal-media-controls-download-button { 
+display:none !important; 
+} 
+
+audio::-webkit-media-controls-enclosure { 
+overflow:hidden !important; 
+} 
+
+audio::-webkit-media-controls-panel { 
+width: calc(100% + 30px) !important; 
+}
+
+#pagination-container{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 91px;
+}
+#btn-left, #btn-right{
+	padding: 20px;
+}
+#puzzle-container{
+  height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Card List*************************************************************************************/
+
+#pagination-container, .card-mini-cover, #home-container {
+    width: 70%;
+}
+.card-text-size{
+	color: white;
+}
+
+.card-list-style {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	cursor: pointer;
+	padding: 15px;
+	margin-bottom: 10px;
+    margin-top: 10px; 
+}
+.card-list-style:hover .card-img-size{
+   width: 105px;
+   height: 105px;
+}
+.card-list-style:hover h1.card-text-size {
+    font-size: 41px;
+}
+
+
+.card-img-size {
+	height: 100px;
+	width: 100px;
+}
+
+.card-text-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 118px;
+	margin-left: 14px;
+}
+
+
+/*account*************************************************************************************/
+#add-puzzle-page{
+	display: none;
+}
+
+
+#btn-login-account { 
+	
+}
+
+#sign-out { 
+	display: none;
+}
+.acc-username{
+	display: none;
+}
+
+#account-container{
+	display: flex;
+	flex-direction: column;
+}
+
+#btn-create-account{
+	
+	display: none;
+}
+
+#go-create-account{
+	margin-top: 20px;
+}
+.validation-account{
+	color: red;
+ 	margin-bottom: 40px;
+
+}
+#pass-validation-error{
+	display: none;
+	color: #b1b3b7;
+	font-size: 13px;
+}
+
+.btn-account{
+	text-transform: uppercase;
+	margin-top: 30px;
+	padding: 5px;
+}
+label{
+	
+}
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 32px;
+   
+}
+input[type=text]:focus {
+	 outline: none;
+	border-bottom: 3px solid gray;
+   
+}
+
+.account-text{
+	color: white;
+}
+
+
+
+/*drag-drop*************************************************************************************/
+.drag-drop-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #eee;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+        border: dashed 3px #C1C3C5;
+}
+.uploadImage-text{
+	font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #b1b3b7;
+}
+#drop-img-size{
+	height: 300px;
+	width: 300px
+}
+#file-type {
+    margin-top: 20%;
+}
+#img-drag p, #file-type p, #audio-drag p{
+    color: #b1b3b7;
+}
+#message{
+	
+}
+
+
+/*NavBar*************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+header {
+ 	display: flex;
+	justify-content: center;
+    background: black;
+    height: 80px;
+    align-items: center;
+}
+.navbar .right {
+ 	background: black;
+}
+
+.navbar .right a{
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.navbar {
+  width: 75%;
+}
+.navbar .toggle, .navbar .brand {
+  display: inline-block;
+}
+.navbar .link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+}
+.navbar .link:hover, .navbar .link:active {
+  background: gray;
+}
+.navbar .brand {
+  width: 10em;
+  text-align: center;
+  padding: 1em;
+  color: white;
+}
+.navbar .toggle {
+  padding: 1em;
+  color: white;
+  vertical-align: middle;
+  float: right;
+}
+
+@media (min-width: 48em) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+
+  .navbar .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .navbar .link {
+    width: auto;
+  }
+  .navbar .right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .navbar .toggle {
+    display: none;
+  }
+}
+.navbar div {
+  display: none;
+}
+@media (min-width: 48em) {
+  .navbar div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+}
+
+@media (max-width: 48em) {
+  .navbar.active .toggle {
+    
+    color: white;
+  }
+  .navbar.active div {
+    display: block;
+  }
+  .navbar .right {
+	position: absolute;
+    z-index: 444;
+    width: 100%;
+}
+.navbar {
+  width: 100%;
+}
+}

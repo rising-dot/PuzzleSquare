@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>square</title>
+	<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header>
+ 
+  <nav class="navbar">
+    <a href="#" class="brand">test</a>
+    <a href="#" class="toggle"><i class="fa fa-reorder"></i></a>
+
+    <div class="right">
+	    <a href="#" id="home-page" class="link">Home</a>
+	    <a href="#" id="add-puzzle-page" class="link">Add Puzzle</a>
+	    <a href="#" id="login-page" class="link">LogIn</a>
+	    <a href="#" id="sign-out" class="link">SignOut</a>
+    </div>
+  </nav>
+
+</header>
+
+
+
+<body>
+
+<div id="cover-container">
+	<!-- <img src="cover.jpg"> -->
+</div>
+
+
+<div id="wrapper">
+
+<!-- ************************************************************************************* -->
+<!-- START Home -->
+	<div id="home-container">
+
+
+
+
+<!-- 		<div class="card-list-style" >
+
+  			<div style="background-image: url(imgres.jpg); height: 149px; width: 80%; transform: translate(-2%, 0%);
+			    position: absolute;
+			    background-size: cover;
+			    background-position: center center;
+			    background-repeat: no-repeat;
+			    z-index: -1;
+			    opacity: .5;">
+			</div>
+
+			<div class="card-img-holder">
+				<img class="card-img-size" src="imgres.jpg">
+			</div>
+
+			<div class="card-text-center">
+				<h1 class="card-text-size"> yo yo yo</h1>
+			</div>
+		</div> -->
+
+
+
+
+
+
+
+	</div>
+
+	
+		
+
+	
+<!-- END Home -->
+<!-- ******************************************************************************************* -->
+
+
+
+<!-- ************************************************************************************* -->
+<!-- START Login -->
+	<div id="account-container">
+	
+
+		<label class="account-text acc-username" for="username">Username</label>	
+		<input type="text" value="" id="username" name="uppercase" class="account-input acc-username">
+		<span id="username-validation-error" class="validation-account acc-username"></span>
+
+
+		<label class="account-text" for="email">Email</label>
+		<input type="text" value="" id="email" class="account-input">
+		<span id="email-validation-error" class="validation-account"></span>
+
+
+		<label class="account-text" for="password">Password</label>
+		<input type="text" value="" id="password" class="account-input">
+		<span id="pass-validation-error">at least 6 characters</span>
+
+		
+		<button class="btn-account" id="btn-login-account">Login</button>
+		<button class="btn-account" id="btn-create-account">Create Account</button>
+		<p id="go-create-account"><a href="#">Create Account</a></p>
+	</div>
+<!-- END Login -->
+<!-- ******************************************************************************************* -->
+
+
+
+
+
+
+
+
+
+<!-- ************************************************************************************* -->
+<!-- START Puzzle -->
+	<div id="puzzle-container">
+		<div id="title">
+	 	   <h1 id="fade"></h1>
+		</div>
+		<div id="main" class="main">
+	   		<canvas id="puzzle" width="480px" height="480px"></canvas>
+		</div>
+		<div id="solve"></div>
+	</div>
+<!-- END Puzzle -->
+<!-- ******************************************************************************************* -->
+
+
+
+
+<!-- ************************************************************************************* -->
+<!-- START form for audio, img, text -->
+<div id="formWrapper">
+
+
+	<!-- ***********************************IMAGE******************************************************** -->
+	<div id="img-main-container">
+		<div id="img-drag" class="drag-drop-container">
+
+			<div id="file-type">
+				<div class="uploadImage-text">Drag images here</div>
+				<p>Or</p>
+				<input type="file" value="upload" id="fileImg" class="custom-file-input">
+			</div>	
+
+			<p>file type: jpeg, png, jpg and max 51 KB</p>
+		</div>
+
+		<div id="canvasContainer">
+			<canvas id="canvas"></canvas>
+		</div>
+	
+	</div>
+	<!-- ***********************************IMAGE******************************************************** -->
+
+
+	<!-- ***********************************SONG******************************************************** -->
+	<div id="audio-main-container">	 
+		<div id="audio-drag" class="drag-drop-container">
+
+			<div id="file-type">
+				<div class="uploadImage-text">Drag audio here</div>
+				<p>Or</p>	
+				<input type="file" value="upload" id="fileMusic" class="custom-file-input">
+			</div>	
+			<p>file type: mp3, wav, ogg and max 51 MB</p>
+		</div>
+	</div>
+	<!-- ************************************SONG******************************************************* -->
+
+
+	<div class="progressContainer">
+		<h3>Image Progress bar</h3>
+		<progress value="0" max="100" id="uploadImg" class="progressStyle">0%</progress>	
+	</div>
+
+	<div class="progressContainer">
+		<h3>Audio Progress bar</h3>
+		<progress value="0" max="100" id="uploadMusic" class="progressStyle">0%</progress>	
+	</div>	
+
+
+	<p id="message"></p>
+	<div id="btn-container">	
+		<button id="selected-new-image">Selected New Image</button>
+		<button id="back-to-img">Back To Image</button>
+		<button id="go-to-audio">Go To Audio</button>
+		<button id="finished-btn">Finished</button>		
+	</div>
+
+	
+</div>
+<!-- END form for audio, img, text -->
+<!-- ******************************************************************************************* -->
+
+
+
+
+
+	<div id="pagination-container">	
+	
+		<button id="btn-left">left</button>
+		<button id="btn-right">right</button>		
+	</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBUSO_chErlU_x-adRXxpZ1dW8OX6lCPzI",
+    authDomain: "musicpuzzle-a43f8.firebaseapp.com",
+    databaseURL: "https://musicpuzzle-a43f8.firebaseio.com",
+    projectId: "musicpuzzle-a43f8",
+    storageBucket: "musicpuzzle-a43f8.appspot.com",
+    messagingSenderId: "181807007275"
+  };
+  firebase.initializeApp(config);
+  var database = firebase.database();
+
+  var storage = firebase.storage();
+
+
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/homeDisplay.js"></script>
+<script type="text/javascript" src="js/createAccount.js"></script>
+<script type="text/javascript" src="js/btn.js"></script>
+<script type="text/javascript" src="js/gamescript.js"></script>
+<script type="text/javascript" src="js/imgUploadScript.js"></script>
+<script type="text/javascript" src="js/musikUploadScript.js"></script>
+
+</body>
+</html>
